@@ -7,7 +7,7 @@ export default class GlassShop extends Component {
     return (
       <div className="">
         <div className="container-fluid body__background text-center">
-          <h5 className="text-white">TRY GLASSES APP ONLINE</h5>
+          <h5 className="text-white">TRY GLASSES APP ONLINE - BÀI LÀM CHƯA XONG ANH ƠI!</h5>
         </div>
       </div>
     );

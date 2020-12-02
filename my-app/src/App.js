@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import GlassShop from "./Components/GlassShop";
 
 function App() {
   return (
-    <div className="App">
-      ABC
+    <div>
+      <GlassShop />
     </div>
   );
 }

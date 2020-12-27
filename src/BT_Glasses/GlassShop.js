@@ -84,7 +84,15 @@ export default class GlassShop extends Component {
       backgroundImage: `url(${imgBG})`,
       backgroundRepeat: "repeat",
     };
-
+    const element = [];
+    for (let index = 1; index < 9; index++) {
+      const dom = (
+        <a style={{ cursor: "pointer" }}>
+          <img src={`./img/v${index}.png`} width="100" height="80" />
+        </a>
+      );
+      element.push(dom);
+    }
     return (
       <div
         className="container-fluid body__background text-center px-0"
@@ -104,34 +112,18 @@ export default class GlassShop extends Component {
             </div>
           </div>
 
-          <div className="col-4" style={{ paddingTop: "700px" }}>
-            <a style={{ cursor: "pointer" }}>
+          <div
+            className="col-4"
+            style={{ paddingTop: "700px", position: "relative" }}
+          >
+            <div className="thumbnail">
               <img src="./img/v1.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v2.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v3.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v4.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v5.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v6.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v7.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v8.png" width="100" height="80" />
-            </a>
-            <a style={{ cursor: "pointer" }}>
-              <img src="./img/v9.png" width="100" height="80" />
-            </a>
+              <div className="caption">
+                <h3>Thumbnail label</h3>
+                <p>hello world</p>
+              </div>
+            </div>
+            {element}
           </div>
 
           <div className="col-4">

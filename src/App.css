@@ -49,8 +49,15 @@ ul {
 }
 
 .categoryGlasses__bg {
-  background-color: white;
   height: 350px;
   width: 700px;
   overflow: hidden;
+}
+
+.imgModel__after {
+  position: relative;
+}
+
+.model__content {
+  position: absolute;
 }

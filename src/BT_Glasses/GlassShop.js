@@ -28,7 +28,13 @@ export default class GlassShop extends Component {
 
         <div className="row">
           <div className="col-6 d-flex">
-            <img src="./img/model.jpg" alt="model.jpg" style={imgModel} />
+            <img
+              className="imgModel__after"
+              src="./img/model.jpg"
+              alt="model.jpg"
+              style={imgModel}
+            />
+            <div className="model__content">ABC</div>
           </div>
           <div className="col-6">
             <img src="./img/model.jpg" alt="model.jpg" style={imgModel} />

@@ -1,15 +1,26 @@
 import React, { Component } from "react";
-// import glassStore from "../data/glassStore.json";
+import glassStore from "../data/glassStore.json";
 
 export default class GlassShop extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      glassItem: glassStore[0],
+    };
+  }
+  clickChangeGlass = (currentGlass) => {
+    console.log(currentGlass);
+    this.setState({
+      glassItem: glassStore[currentGlass],
+    });
+  };
   render() {
-    let imgModel = { width: 350, height: 450, marginLeft: 200 };
     let imgGlass = { width: 130, height: 110 };
     let glassArr = [];
 
     for (let i = 1; i < 9; i++) {
       const dom = (
-        <button>
+        <button key={i} onClick={() => this.clickChangeGlass(i)}>
           <img
             src={`./img/v${i}.png`}
             alt={`./img/v${i}.png`}
@@ -27,18 +38,36 @@ export default class GlassShop extends Component {
         </div>
 
         <div className="row">
-          <div className="col-6 d-flex">
+          <div className="col-6">
             <img
               className="imgModel__after"
               src="./img/model.jpg"
               alt="model.jpg"
-              style={imgModel}
             />
-            <div className="model__content">ABC</div>
+
+            <div className="model__content">
+              <h2>{this.state.glassItem.name}</h2>
+              <p>{this.state.glassItem.desc}</p>
+            </div>
+
+            <div className="model__glass">
+              <img
+                className="imgModel__after"
+                src={this.state.glassItem.url}
+                alt={this.state.glassItem.url}
+                style={{ width: 250, height: 100, opacity: 0.5 }}
+              />
+            </div>
           </div>
+
           <div className="col-6">
-            <img src="./img/model.jpg" alt="model.jpg" style={imgModel} />
+            <img src="./img/model.jpg" alt="model.jpg" />
           </div>
+        </div>
+
+        <div className="row container">
+          <div className="col-6"></div>
+          <div className="col-6"></div>
         </div>
 
         <div>
